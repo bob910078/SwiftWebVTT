@@ -11,7 +11,7 @@ internal class CustomScanner {
     
     var scanLocation: Int {
         get { return scanner.scanLocation }
-        set { scanner.scanLocation = newValue }
+        set { scanner.scanLocation = min(length, newValue) }
     }
     var isAtEnd: Bool { return scanLocation == length }
     
